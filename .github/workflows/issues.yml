@@ -1,0 +1,10 @@
+name: Output Info From Issues Event
+
+on: issues
+
+jobs:
+  info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: output issues metadata
+        run: echo "${{ otJSON(github) }}"
